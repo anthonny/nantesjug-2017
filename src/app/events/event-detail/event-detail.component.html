@@ -1,0 +1,42 @@
+<h1>{{selectedEvent.title}}</h1>
+<header>
+    <a [href]="selectedEvent.fullPlace.maps">
+    <img class="map" src="{{selectedEvent.fullPlace.image}}" alt="">
+    </a>
+    <div>
+    <div><strong>{{selectedEvent.fullPlace.name}}</strong></div>
+    <div>{{selectedEvent.fullPlace.address}}</div>
+    <div>{{selectedEvent.fullPlace.city}}</div>
+    <div>
+        <a *ngIf="selectedEvent.register" [href]="selectedEvent.register" class="button" target="_blank">S'inscrire</a>
+        <a [href]="selectedEvent.agenda" class="button" target="_blank">Agenda</a>
+    </div>
+    </div>
+</header>
+<section>
+    <ul>
+    <li *ngFor="let subject of selectedEvent.subjects">
+        <article>
+        <header>
+            <h2>{{subject.title}}</h2>
+            <p><strong>Horaire:</strong> {{subject.time}}</p>
+        </header>
+        <section>
+            <div [innerHtml]="subject.abstract"></div>
+            <h3>Speakers</h3>
+            <ul>
+            <li *ngFor="let speaker of subject.fullSpeakers">
+                <article>
+                  <img [src]="speaker.avatar" alt="">
+                  <div>
+                    {{speaker.name}}
+                  </div>
+                </article>
+            </li>
+            </ul>
+        </section>
+        <hr />
+        </article>
+    </li>
+    </ul>
+</section>

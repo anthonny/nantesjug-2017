@@ -1,0 +1,50 @@
+:host {
+  height: 100%;
+  display: block;
+  padding: 10px 10px;
+}
+h1, h2, h3 {
+    color: rgba(245, 166, 35, 100);
+}
+:host > header {
+    display: flex;
+    flex-direction: row;
+    color: rgba(0, 116, 189, 100);
+}
+:host > header > a {
+    flex: 0 0 300px;
+    align-content: center;
+}
+:host > header > a img {
+    vertical-align: middle;
+}
+:host > header > div {
+    flex: 1;
+    padding-left: 20px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    margin: 0;
+    padding: 0;
+}
+.speaker {
+    display: flex;
+    flex-direction: row;
+}
+.speaker img {
+    flex: 0 0 80px;
+}
+.speaker > div {
+    flex: 1;
+}
+.speaker h4 {
+    margin-bottom: 5px;
+}
+.speaker .social li {
+    display: inline-block;
+    font-size: 24px;
+}
